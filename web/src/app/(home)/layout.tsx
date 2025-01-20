@@ -1,4 +1,4 @@
-import { Logo } from "@/components/navbar";
+import { Logo, Navbar } from "@/components/navbar";
 import { Button } from "@/components/ui/button";
 import { Bell, Hash, LucideHome, Mail, User2 } from "lucide-react";
 import Link from "next/link";
@@ -40,8 +40,12 @@ export default function HomeLayout({
 }) {
   return (
     <>
-      <div className="h-dvh max-w-3xl mx-auto">
-        <aside className="h-full hidden lg:flex flex-col justify-between sticky top-0 border-r w-1/4 p-5">
+      <div className="fixed w-full top-0 z-10 backdrop-blur-md lg:hidden">
+        <Navbar />
+      </div>
+
+      <div className="max-w-4xl mx-auto flex w-full h-dvh">
+        <aside className="h-screen hidden lg:flex flex-col justify-between sticky top-0 border-r w-72 p-5">
           <div>
             <Logo />
             <ul className="my-5 space-y-5">
@@ -61,9 +65,11 @@ export default function HomeLayout({
           <Button className="w-full">Logout</Button>
         </aside>
 
-        <main className="h-full">{children}</main>
+        <main className="h-full flex-1 py-24 lg:mb-0 lg:p-0 w-full">
+          {children}
+        </main>
       </div>
-      <div className="fixed min-w-full bottom-0 lg:hidden flex justify-evenly py-4 border-t">
+      <div className="bg-white z-10 fixed min-w-full bottom-0 lg:hidden flex justify-evenly py-4 border-t">
         {homeLinks.map((item, idx) => (
           <Link
             // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
