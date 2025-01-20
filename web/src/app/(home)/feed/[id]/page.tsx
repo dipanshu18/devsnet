@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function FeedDetail() {
   return (
-    <div className="border-r h-dvh overflow-y-auto scrollbar-thin">
+    <div className="border-r h-dvh overflow-y-auto">
       <div className="p-5">
         <div className="flex items-center gap-2">
           <Image
