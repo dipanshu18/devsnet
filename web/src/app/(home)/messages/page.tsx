@@ -2,21 +2,19 @@ import Image from "next/image";
 
 export default function Messages() {
   return (
-    <div className="h-full overflow-y-auto">
-      <h1 className="p-5 text-xl font-bold lg:sticky lg:top-0 lg:z-10 lg:bg-white">
-        Messages
-      </h1>
+    <div className="h-full lg:overflow-y-auto scrollbar-thin">
+      <h1 className="p-5 text-xl font-bold">Messages</h1>
 
       {/* all chats */}
 
-      <div className="grid grid-cols-1">
+      <div className="grid grid-cols-1 border-t">
         {Array(100)
           .fill("")
           .map((_, idx) => (
             <div
               // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
               key={idx}
-              className="w-full border-r flex items-center gap-2 p-5 border-b hover:bg-neutral-100 transition-all duration-300"
+              className="w-full lg:border-r flex items-center gap-2 p-5 border-b hover:bg-neutral-100 transition-all duration-300"
             >
               <Image
                 src={"/logo.svg"}

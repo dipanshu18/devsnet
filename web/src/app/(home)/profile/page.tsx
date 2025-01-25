@@ -5,10 +5,8 @@ import { FeedCard } from "@/components/feed-card";
 
 export default function UserProfile() {
   return (
-    <div className="h-dvh lg:overflow-y-auto">
-      <h1 className="px-5 pt-0 lg:p-5 text-xl font-bold lg:sticky lg:top-0 lg:z-10 lg:bg-white">
-        Profile
-      </h1>
+    <div className="h-dvh lg:overflow-y-auto scrollbar-thin">
+      <h1 className="px-5 pt-0 lg:p-5 text-xl font-bold">Profile</h1>
       <div className="p-5 space-y-2">
         <Image
           src={"/logo.svg"}

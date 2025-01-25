@@ -2,10 +2,8 @@ import Link from "next/link";
 
 export default function Hashtags() {
   return (
-    <div className="h-dvh overflow-y-auto">
-      <h1 className="p-5 text-xl font-bold lg:sticky lg:top-0 lg:z-10 lg:bg-white">
-        Hashtags
-      </h1>
+    <div className="lg:h-dvh overflow-y-auto scrollbar-thin">
+      <h1 className="p-5 text-xl font-bold">Hashtags</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 p-5">
         {Array(100)
           .fill("")

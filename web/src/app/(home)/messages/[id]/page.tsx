@@ -24,7 +24,7 @@ export default function MessageChatBox() {
           <p className="text-xs text-neutral-700">created at</p>
         </div>
       </div>
-      <div className="flex-1 h-[70dvh] flex flex-col gap-5 my-5 overflow-y-auto">
+      <div className="flex-1 h-[70dvh] flex flex-col gap-5 my-5 overflow-y-auto scrollbar-thin">
         {Array(20)
           .fill("")
           .map((_, idx) => (

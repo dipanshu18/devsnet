@@ -65,7 +65,7 @@ export default function HomeLayout({
           <Button className="w-full">Logout</Button>
         </aside>
 
-        <main className="h-full flex-1 py-24 lg:mb-0 lg:p-0 w-full">
+        <main className="h-full flex-1 my-20 lg:m-0 w-full scrollbar-thin">
           {children}
         </main>
       </div>

@@ -6,10 +6,8 @@ import { Button } from "@/components/ui/button";
 
 export default function OtherUserProfile() {
   return (
-    <div className="h-dvh lg:overflow-y-auto">
-      <h1 className="px-5 pt-0 lg:p-5 text-xl font-bold lg:sticky lg:top-0 lg:z-10 lg:bg-white">
-        Profile
-      </h1>
+    <div className="h-dvh lg:overflow-y-auto scrollbar-thin">
+      <h1 className="px-5 pt-0 lg:p-5 text-xl font-bold">Profile</h1>
       <div className="p-5 space-y-2">
         <div className="flex items-center justify-between">
           <Image
